@@ -95,6 +95,9 @@ def scan_qr_code(qr_code_id):
         # return redirect("www.google.com")
     else:
         return render_template("scanned.html")
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 if __name__ == '__main__':
