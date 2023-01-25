@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>PrintEase</title>
+        <link rel="stylesheet" href="static/style.css"/>
+        <script>
+            // Set the 2 minute countdown
+            console.log("url will get printed here"+'{{url}}');
+            var timer = 120;
+            var timer2= 6;
+            var intervalId = setInterval(function(){
+                timer--;
+                if("{{data}}" == 0){
+                console.log("{{qr_code_id}}")
+            }
+                // Update the timer element with the current time
+                document.getElementById("timer").innerHTML = timer;
+                if(timer === 0){
+                    // Stop the interval when the timer reaches 0
+                    clearInterval(intervalId);
+                    // Display the timeout message
+                    document.getElementById("timeout").style.display = "block";
+                    var intervalId2 = setInterval(function(){
+                        timer2--;
+                        document.getElementById("timer2").innerHTML = timer2;
+                        if(timer2===0){
+                            clearInterval(intervalId2);
+                            window.location.reload()
+                        }
+                    },1000);
+                }
+            }, 1000);
+
+        </script>
+    </head>
+    <body>
+        <h2>PrintEase</h2><h4>(Streamlined Printing Services For Local Shops and Customers)</h4><br>
+        <p class="lead">Print Any file <b>Just with One Click</b><br>(credits: Samuel, Santhosh & Vejay)</p>
+        <br>
+        <center><img src="static/qr.png" height="300px" width="300px"></center>
+        <h2>Scan to Proceed for Payment!</h2>
+        <br>
+        <div id="timer"></div>
+        <div id="timeout" hidden="true"><br>Timeout! <br>Redirecting in <span id="timer2"></span></div>
+   </body>
+   <!-- <script>
+    window.location.href = "{{data}}";
+</script> -->
+   
+</html>
