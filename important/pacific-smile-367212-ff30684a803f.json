@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pacific-smile-367212",
+  "private_key_id": "ff30684a803f9ddddfa7b8f2761dfa03f65428b0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDFEQteM1RHZTcz\ni5hM9w71VbyYy+B4Bh/5SM9KKJJuVmfwRNYoViz/GfbgGBVaTCGStV3/5UgP0Fse\nUigiS9hkCDCvWNcrbDBZPyBJmSSDwhwlwBCADDheD4EDzw4AKg87pM1u7MDrLGmU\n+dPglFtLKlZB2eL2mLbLP571pJdrhZG0deLpMpgYhIZykzsUhaT3XGXzBs2jNFik\n7p5f3N2DywLT+83hTkCs+WUl/wZjOhPmXLtNDPAJE3N/J8WOo9i1N9TwLn+Wjjx1\n9UCyNkBWDObxxqWG0RzXq3SWcLtjMGi7g6qurIGPJ5qLKFzvqaKnQjuB4ZCXQQc1\ncVqsNkONAgMBAAECggEAF0DVc7ugeGjilHP74tUM5aPExHjbgf4jBrdx3PZ1n4xq\n6P3ju/sTMH9//d20TfqJbvYfYzh1rNwGlx4q+y+yQczPmy6N++M2afQvcKUf8GYs\nC8OijswiWJhWvmbPvZ2OPO5LiV5paIv4jL9/91I6MDU3hr9ZmdnXnpsMEZXm13pv\nDGfk3wPcAfh7mbvaxXBo/csyoIPwTNps/tqoY2lUZ20vrsxoGJTznL6BiOfPGroY\nCd1rjK3pvpBsX7YKHZmGmK9Xg2zR8X9GzownAlNRTm0bKnH6bgKHA5Kt72K8ASH+\nmMzm6zbZrUduNO/4IJsvceGQLIAmSM6iNZxFStBy1wKBgQDv2X5vRkepWBFSBc4b\nQP7xK1JR978uStQPsbNKJBVYUo2z64Dyu7GMZFJkYwgigd6fPEMYFzFSIiDNf2a+\nB0gBi4sbBT2NYhbMTxUPDSwk/k5ruTln5fc4ylAH5qYbFKigU3iqwqqXjslXn1Ai\nXRH+kQ/hDKpU1bI7FPV2m00CdwKBgQDSVg+R6FtqDzGwdYFncWNuoVK+iy/ZRfqx\ne9pi8i59ymSVLBYwlWiodvM7jU7ICHJa4hjibjajpBU6T/DQw6t7i6pCSXnDsxw7\nSOnoes3nC/Gm3IzsxCtPSi9lUDbUrpOe+lMkmPOF22jMz1uzKFWNZam4OSpGVZSL\nwNdWvdhHGwKBgAzg8dAJxwlJyExOMX33JHlQqS/rjKFwtShOk2D0xQykCiXSDG98\nMpFmRaJMSwCHVqvYMYYWoLhXSsmeAKdNfslOc960jlSMIss/p9LSEz+9Q/q2zGVO\nzNKI0nlKIjssBc3uDXml0EEpEpiY3lWqB7BSm7aq1m6Ntu9DNdbzidQLAoGAOZpQ\nEUltH5KhrQ3BLq8i5/1OR9iedgZwLYMZv9dLXC+9dAzq1stUKi7JVhnQ5X9KshER\nd5FvbUlWdu3Fqaaso90P969fpXS72pCRXpWjJg9jUqs7/OuMYN6UNE7PdVeKHhO4\nCWHJ73KzNMPk/R+irmKVJFqjdTeiwtNBJgQ/4tkCgYBO5W+q7U4WFjwEHAFPTAk+\nsiPF8eGkwVaJCNATb1ryXBXLJkG5qOke/lt79wLXAwgjQrjNnwu0oBO6r093QPU3\n1nGMomGNxFwTUvFB0yKSJ+0yig45RjWmWeH5O8f+O5HTqCb443+qo+w2dl4qH24y\n+kJ013jkxoqqTCu72QWlKw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "printease@pacific-smile-367212.iam.gserviceaccount.com",
+  "client_id": "117201873850352167750",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/printease%40pacific-smile-367212.iam.gserviceaccount.com"
+}
