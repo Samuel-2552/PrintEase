@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, url_for
 import sqlite3
 
 app = Flask(__name__)
@@ -10,6 +10,8 @@ def connect_db():
 
 @app.route('/')
 def index():
+    if 'username' in session:
+        return redirect(url_for('dashboard'))
     return render_template('index.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
@@ -45,11 +47,46 @@ def login():
         return "Invalid username or password"
     return render_template('login.html')
 
-@app.route('/dashboard')
+@app.route('/dashboard',methods=['GET', 'POST'])
 def dashboard():
-    if 'username' in session:
-        return render_template('dashboard.html', username=session['username'])
-    return redirect('/login')
+    if request.method == 'POST':
+        # Get the user message from the form
+        message = request.form['message']
+
+        # Connect to the database
+        conn = sqlite3.connect('users.db')
+        cursor = conn.cursor()
+
+        # Update the user message in the database
+        cursor.execute('''
+        UPDATE users SET message=? WHERE username=?
+        ''', (message, session['username']))
+
+        # Commit the changes and close the connection
+        conn.commit()
+        conn.close()
+
+        # Show a success message
+        return 'Message saved successfully'
+
+    # Get the username from the session
+    username = session['username']
+
+    # Connect to the database
+    conn = sqlite3.connect('users.db')
+    cursor = conn.cursor()
+
+    # Get the user message from the database
+    cursor.execute('''
+    SELECT message FROM users WHERE username=?
+    ''', (username,))
+    message = cursor.fetchone()[0]
+
+    # Close the connection
+    conn.close()
+
+    # Render the dashboard template with the username and message
+    return render_template('dashboard.html', username=username, message=message)
 
 @app.route('/logout')
 def logout():
