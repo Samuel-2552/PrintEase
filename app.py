@@ -3,36 +3,9 @@ import sqlite3
 import os
 import fitz
 from PIL import Image
-from google.oauth2.service_account import Credentials
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
-
-creds = Credentials.from_service_account_file('important\pacific-smile-367212-ff30684a803f.json')
-service = build('drive', 'v3', credentials=creds)
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
-
-#to detect files of one intensity
-def check_pdf_intensity(pdf_path):
-    doc = fitz.open(pdf_path)
-    for page in doc:
-        for img in page.get_image_files():
-            with Image.open(img) as image:
-                pixels = image.load()
-                width, height = image.size
-                intensity = pixels[0, 0][0]
-                is_one_intensity = True
-                for x in range(width):
-                    for y in range(height):
-                        if pixels[x, y][0] != intensity:
-                            is_one_intensity = False
-                            break
-                    if not is_one_intensity:
-                        break
-                if is_one_intensity:
-                    return True
-    return False
 
 def connect_db():
     connection = sqlite3.connect('users.db')
@@ -123,14 +96,6 @@ def upload_file():
     file = request.files["file"]
     if file and file.content_type == "application/pdf":
         file.save(os.path.join("files", file.filename))
-        username = session['username']
-        fname = "files\\" + file.filename
-        file_metadata = {username: fname}
-        media = MediaFileUpload(fname,
-                                mimetype='text/plain')
-        file = service.files().create(body=file_metadata, media_body=media,
-                                            fields='id').execute()
-        print(F'File ID: {file.get("id")}')
         return "File uploaded successfully!"
     return "No file was provided."
 
